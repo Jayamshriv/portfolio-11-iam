@@ -240,7 +240,7 @@
                 content: '';
                 position: absolute;
                 inset: 0;
-                background: var(--gradient-android);
+                /* background: var(--gradient-android); */
                 border-radius: 35px;
                 opacity: 0;
                 transition: opacity 0.3s ease;
@@ -805,7 +805,7 @@
                 content: '';
                 position: absolute;
                 inset: -2px;
-                background: var(--gradient-android);
+                background: black;
                 border-radius: 20px;
                 opacity: 0;
                 transition: opacity 0.3s ease;
@@ -1002,7 +1002,7 @@
                 content: '';
                 position: absolute;
                 inset: -2px;
-                background: conic-gradient(from 0deg, var(--android-green), var(--kotlin-blue), var(--compose-green), var(--android-green));
+                /* background: conic-gradient(from 0deg, var(--android-green), var(--kotlin-blue), var(--compose-green), var(--android-green)); */
                 border-radius: 25px;
                 opacity: 0;
                 transition: opacity 0.4s ease;
@@ -1010,8 +1010,11 @@
             }
 
             .project-card:hover {
+                background: black;
+                border-color: var(--android-green);
+                color: black;
                 transform: translateY(-15px) rotateX(10deg) rotateY(5deg);
-                box-shadow: 0 40px 80px rgba(0, 0, 0, 0.3);
+                box-shadow: 0 40px 80px rgba(61, 220, 132, 0.4);
             }
 
             .project-card:hover::before {
@@ -1497,7 +1500,7 @@
             .code-block::before {
                 content: attr(data-language);
                 position: absolute;
-                top: -12px;
+                top: 12px;
                 right: 15px;
                 background: var(--kotlin-blue);
                 color: var(--text-primary);
@@ -1705,12 +1708,14 @@
                         </div>
 
                         <div class="code-block" data-language="Kotlin" style="margin-top: 2rem;">
-                            class AndroidDeveloper {
-                            val name = "Jayam Shrivastav"
-                            val passion = listOf("Clean Code", "Innovation", "User Experience")
+                            <pre><code>
+class AndroidDeveloper {
+    val name = "Jayam Shrivastav"
+    val passion = listOf("Clean Code", "Innovation", "User Experience")
 
-                            fun buildAmazingApps() = "Let's create something extraordinary!"
-                            }
+    fun buildAmazingApps() = "Let's create something extraordinary!"
+}
+</code></pre>
                         </div>
                     </div>
                 </div>
@@ -2255,11 +2260,11 @@
 
             function updateNavigation() {
                 // Update nav background
-                if (window.scrollY > 100) {
-                    nav.classList.add('scrolled');
-                } else {
-                    nav.classList.remove('scrolled');
-                }
+                // if (window.scrollY > 100) {
+                //     nav.classList.add('scrolled');
+                // } else {
+                //     nav.classList.remove('scrolled');
+                // }
 
                 // Update active nav item
                 let current = '';
